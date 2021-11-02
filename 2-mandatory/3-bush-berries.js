@@ -22,7 +22,12 @@
 */
 
 function isBushSafe(berryArray) {
-  //Write your code here
+  const safeMsg = "Bush is OK to eat";
+  const unsafeMsg = "DO NOT EAT!!!";
+  const isSafeEat = berryArray.every(function (berry) {
+    return berry === "pink;"
+  });
+  return isSafeEat ? safeMsg : unsafeMsg;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
