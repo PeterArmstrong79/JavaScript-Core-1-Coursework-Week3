@@ -11,7 +11,15 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function findSafeOxygenLevel() {}
+function findSafeOxygenLevel() {
+  const safeLvl = oxygenLvls.find(function (lvl) {
+    const numLvl = +lvl.replace("%", "");
+    const lowLvl = 19.5;
+    const upLvl = 23.5;
+    return lowLvl < numLvl && numLvl < upLvl;
+  });
+  return safeLvl;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
